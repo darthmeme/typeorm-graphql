@@ -1,0 +1,20 @@
+# import Book from "./types/book.gql"
+# import Author from "./types/author.gql"
+
+input BookInputType {
+  id: String!
+  title: String
+  publicationDate: String
+  authorIds: [String!]
+}
+
+type Query {
+  test: String!
+  books: [Book!]!
+}
+
+type Mutation {
+  addBook(title: String!, publicationDate: String!): Book!
+  addAuthor(name: String!, bio: String): Author!
+  editBook(input: BookInputType): Book
+}

@@ -1,0 +1,8 @@
+# import Author from "./author.gql"
+
+type Book {
+  id: ID!
+  title: String!
+  publicationDate: String!
+  authors: [Author!]!
+}
